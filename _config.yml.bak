@@ -3,32 +3,6 @@ title: My Resume # your title
 url: 'http://junlulocky.com'
 baseurl: '/online-cv' #change it according to your repository name
 
-links1:
-  - name:	All
-    url:	/
-    type:	recent
-    external:	false
-  - name:	Profile
-    url:	/blog/profiles
-    type:	profiles
-    external:	false
-  - name:	Education Background
-    url:	/blog/EduBkg
-    type:	EduBkg
-    external:	false
-  - name:	Research Background
-    url:	/blog/ResBkg
-    type:	ResBkg
-    external:	false
-  - name:	My Love
-    url:	/blog/MyLove
-    type:	MyLove
-    external:	false
-blog_0:    recent
-blog_1:	   profiles
-blog_2:    EduBkg
-blog_3:    ResBkg
-blog_4:    MyLove 
 
 
 # Profile information

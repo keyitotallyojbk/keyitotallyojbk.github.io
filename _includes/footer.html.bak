@@ -2,6 +2,5 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">
         <p class="copyright">Copyright © 2017 Jekyller
         | More Templates <a href="https://github.com/jekyller" target="_blank" title="jekyller">Jekyller</a></p>
-    </div>
-	<span id="busuanzi_container_site_pv">Total site visit:<span id="busuanzi_value_site_pv"></span>times</span>
+    </div>    
 </footer>  
