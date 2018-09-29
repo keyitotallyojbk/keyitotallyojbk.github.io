@@ -1,5 +1,6 @@
 <footer class="main-footer">
   <div class="copyright">
     <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
+	<span id="busuanzi_container_site_pv">Total site visit:<span id="busuanzi_value_site_pv"></span>visits</span> 
   </div>
 </footer> <!-- End Footer -->
