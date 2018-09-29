@@ -1,48 +1,49 @@
+title: My personal blog - Adam Neilson
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+permalink: ':title/'
+baseurl: "/adam-blog" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-title: My Resume # your title
-url: 'http://junlulocky.com'
-baseurl: '/online-cv' #change it according to your repository name
+# Author settings
+author: Adam Neilson # add your name
+author-pic: adam-face.jpg
+about-author: My name is Adam Neilson. I’m a full-time adventure travel blogger and photographer who’s been exploring the world for over 2 years.
 
-links1:
-  - name:	All
-    url:	/
-    type:	recent
-    external:	false
-  - name:	Profile
-    url:	/blog/profiles
-    type:	profiles
-    external:	false
-  - name:	Education Background
-    url:	/blog/EduBkg
-    type:	EduBkg
-    external:	false
-  - name:	Research Background
-    url:	/blog/ResBkg
-    type:	ResBkg
-    external:	false
-  - name:	My Love
-    url:	/blog/MyLove
-    type:	MyLove
-    external:	false
-blog_0:    recent
-blog_1:	   profiles
-blog_2:    EduBkg
-blog_3:    ResBkg
-blog_4:    MyLove 
+# Contact links
+email: # Add your Email address
+phone: # Add your Phone number
+website: # Add your website, do not add http://
+linkedin: # Add your Linkedin handle
+github: artemsheludko # Add your Github handle
+twitter: '@artemsheludko_' # Add your Twitter handle
+facebook: # Add your Facebook handle
+instagram: # Add your Instagram handle
+pinterest: # Add your Pinterest handle
 
+# Newsletter
+mailchimp: # Add your MailChimp form identifier.
 
-# Profile information
-yourname: Brown Smith  ## put your name
-location: San Francisco , CA
+# Disqus
+discus_identifier: mr-brown # Add your discus identifier
 
+# Tracker
+analytics: # Google Analytics
 
-## Social Profiles
-facebook: http://www.facebook.com  ## your facebook account url
-twitter: http://www.twitter.com  ## your twitter account url
-linkedin: http://www.linkedin.com  ## your linkedin account url
-dribbble: http://www.dribble.com  ## you dribbble account url
-foursquare: http://www.foursquare.com  ## your foursquare account url
+# Paginate
+paginate: 6
+paginate_path: /page:num/
 
+# Build settings
+markdown: kramdown
 
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
 
-# Update all the sections by editing the files inside _includes folder.
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]

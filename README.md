@@ -1,23 +1,38 @@
-# Online-cv (Panel CV style win8)
+# Adam Blog is a minimal clear theme for Jekyll
 
-This theme is collected from [cssmoban](http://www.cssmoban.com/) and modified by [Locky](https://github.com/junlulocky)
+![Adam Blog - Imac](https://github.com/artemsheludko/adam-blog/blob/master/assets/img/adam-blog-imac.jpg?raw=true)
 
-I have made this into a Jekyll Theme. Demo: [https://jekyller.github.io/online-cv](https://jekyller.github.io/online-cv)
+## Demo
 
-The theme would look like this 
+Check the theme in action [Demo](https://artemsheludko.github.io/adam-blog/)
 
-![Demo](/demo/demo.png)
+The main page would look like this:
 
+![Main page preview](https://github.com/artemsheludko/adam-blog/blob/master/assets/img/adam-home-page.jpg?raw=true)
 
-# Installation
+The post page would look like this:
 
-- Fork the repository
-- Go to settings and set Github Pages source as master.
-- Your new site should be ready at https://username.github.io/online-cv/
+![Post page preview](https://github.com/artemsheludko/adam-blog/blob/master/assets/img/adam-post-example.jpg?raw=true)
 
-Check out for more themes: [Jekyll Themes](http://jekylltheme.org)
+## Features
 
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](http://fontawesome.io/)
+- [Disqus](https://disqus.com/)
+- [MailChimp](https://mailchimp.com/)
+- [Analytics](https://analytics.google.com/analytics/web/)
+- [Search](https://github.com/christian-fei/Simple-Jekyll-Search)
 
-# Author
+## Installation:
 
-- [Locky](https://github.com/junlulocky)
+Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is important because ``gh-pages`` branch is used here only to host the blog. You should be using the master branch as the source and create a fresh ``gh-pages`` branch.
+
+## License
+
+GNU General Public License v3.0
+
+## Donate
+
+<p>If you want to show your appreciation, buy me one <a href="https://www.buymeacoffee.com/artemsheludko" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a> ! Every five cups of coffee and a new theme for Jekyll is ready 😋</p>
+<p>Either way, your support is a way to thank me ❤️</p>
+<p align="center"><b>Thank you for your support!</b></p>
