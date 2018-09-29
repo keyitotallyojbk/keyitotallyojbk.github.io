@@ -9,7 +9,7 @@ baseurl: "/adam-blog" # the subpath of your site, e.g. /blog
 url: "https://keyitotallyojbk.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
-author: David Ren # add your name
+author: Adam Neilson # add your name
 author-pic: adam-face.jpg
 about-author: Hi, this is David Ren, I'm now a undergraduate in Beijing Institute of Technology, China, hope you enjoy my blog!
 
