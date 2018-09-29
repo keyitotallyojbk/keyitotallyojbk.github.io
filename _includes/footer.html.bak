@@ -2,5 +2,4 @@
   <div class="copyright">
     <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
   </div>
-  <span id="busuanzi_container_site_pv">Total site visit:<span id="busuanzi_value_site_pv"></span>visits</span> 
 </footer> <!-- End Footer -->
