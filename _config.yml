@@ -1,11 +1,11 @@
-title: My personal blog - Adam Neilson
+title: My personal blog - David Ren
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://keyitotallyojbk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
@@ -47,3 +47,31 @@ plugins:
 
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]
+
+links1:
+  - name:	All
+    url:	/
+    type:	recent
+    external:	false
+  - name:	Profile
+    url:	/blog/profile
+    type:	profile
+    external:	false
+  - name:	Education background
+    url:	/blog/EduBkg
+    type:	EduBkg
+    external:	false
+  - name:	Research background
+    url:	/blog/ResBkg
+    type:	ResBkg
+    external:	false
+  - name:	My Love
+    url:	/blog/MyLove
+    type:	MyLove
+    external:	false
+
+blog_0:    recent
+blog_1:	   profile
+blog_2:    EduBkg
+blog_3:    ResBkg
+blog_4:    MyLove
