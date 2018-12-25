@@ -7,59 +7,63 @@
       <nav class="main-nav">
         <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
         <ul>
-          <li><a href="{{site.baseurl}}/">Blog</a></li>
-          <li><a href="{{site.baseurl}}/about">About</a></li>
+			 {% for link in site.links1 %}
+				{% assign count = 0 %}
+				{% if link.type == site.blog_0 %}
+					{% for post in site.posts %}
+						{% assign count = count | plus: 1 %}
+					{% endfor %}
+				{% endif %}
+
+				{% if link.type == site.blog_1 %}
+					{% for post in site.posts %}
+						{% if post.profile %}
+							{% assign count = count | plus: 1 %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+
+				{% if link.type == site.blog_2 %}
+					{% for post in site.posts %}
+						{% if post.EduBkg %}
+							{% assign count = count | plus: 1 %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+
+				{% if link.type == site.blog_3 %}
+					{% for post in site.posts %}
+						{% if post.ResBkg %}
+							{% assign count = count | plus: 1 %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+
+				{% if link.type == site.blog_4 %}
+					{% for post in site.posts %}
+						{% if post.MyLove %}
+							{% assign count = count | plus: 1 %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+				<li><a href="{{ link.url }}" data-hover="{{link.name}}">{{ link.name }}({{count}})</a></li>
+			 {% endfor %}
         </ul>
       </nav>
+
       <p class="logo"><a href="{{site.baseurl}}/">{{ site.author }}</a></p>
-      <div class="search-icon-container">
+		 <div class="navbar-container">
+
+	    <a href="/" style="text-decoration: none; color: inherit;">Home&emsp;</a>
+		<a href="/about" style=" text-decoration: none; color: inherit;">About&emsp;</a>
         <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
-      </div>
+
+	  </div>
+
     </div>
   </div>
-  <p>
-  {% for link in site.links1 %}
-	{% assign count = 0 %}
-	{% if link.type == site.blog_0 %}
-		{% for post in site.posts %}
-			{% assign count = count | plus: 1 %}
-		{% endfor %}
-	{% endif %}
-
-	{% if link.type == site.blog_1 %}
-		{% for post in site.posts %}
-			{% if post.profiles %}
-				{% assign count = count | plus: 1 %}
-			{% endif %}
-		{% endfor %}
-	{% endif %}
-
-	{% if link.type == site.blog_2 %}
-		{% for post in site.posts %}
-			{% if post.EduBkg %}
-				{% assign count = count | plus: 1 %}
-			{% endif %}
-		{% endfor %}
-	{% endif %}
-
-	{% if link.type == site.blog_3 %}
-		{% for post in site.posts %}
-			{% if post.ResBkg %}
-				{% assign count = count | plus: 1 %}
-			{% endif %}
-		{% endfor %}
-	{% endif %}
-
-	{% if link.type == site.blog_4 %}
-		{% for post in site.posts %}
-			{% if post.MyLove %}
-				{% assign count = count | plus: 1 %}
-			{% endif %}
-		{% endfor %}
-	{% endif %}
-   {% endfor %}
-  </p>
 </header> <!-- End Header -->
+ 
 
 
 

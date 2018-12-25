@@ -1,5 +1,5 @@
 title: My personal blog - David Ren
-email: your-email@domain.com
+email: 564867719r@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -47,6 +47,14 @@ plugins:
 
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]
+
+links:
+ - name:         Home
+   url:          /
+   external:     false
+ - name:         About
+   url:          /about
+   external: false
 
 links1:
   - name:	All
