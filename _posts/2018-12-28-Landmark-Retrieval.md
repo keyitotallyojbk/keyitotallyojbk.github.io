@@ -1,22 +1,22 @@
 ---
 layout: post
-title: The forest in the fog
-date: 2017-08-20 13:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: post-6.jpg # Add image post (optional)
-tags: [Blog, Meditation]
-author: # Add name author (optional)
+title: Landmark Retrieval
+date: 2018-12-28 13:32:20 +0300
+description: This is a technical report about my recent work in Chinese Academy of Sciences, focusing on Google Landmark Retrieval & Recognition task.
+img: landmark.jpeg
+tags: [Blog, DeepLearning]
+author: David Ren
 ---
 
 ## **Attempts of Kaggle Competition: Landmark Retrieval**
 <br/>
 
-###**Chapter 1:&emsp;Prologue**
+### **Chapter 1:&emsp;Prologue**
 ---
 &emsp;This is a brief technical summary of what I have done and what I have learned these days in a battle with the kaggle challenge----Landmark Retrieval. Since the whole program is not finished yet and I’m just getting insight a little into the field of computer vision, I state here as an amateur just to clarify some difficulties I have encountered and accordingly tricky solutions. It is not an academic paper so I will focus myself on the chapter 3, 4, 5, not on the state-of-art methodologies used by other teams. The references are given in chapter 3 in an informal way and if there’s anything wrong, just contact me.
 <br/>
 
-###**Chapter 2: &emsp;Problem statement(Quotation of Kaggle)**
+### **Chapter 2: &emsp;Problem statement(Quotation of Kaggle)**
 ---
 * **Description**
 
@@ -52,7 +52,7 @@ Some query images will have no associated index images to retrieve. These querie
 [4]Very Deep Convolutional Networks for Large-scale Image Recognition<br/>
 [5]Understanding the difficulty of training deep feedforward neural networks<br/>*
 
-###**Chapter 4:&emsp;Method of mine**
+### **Chapter 4:&emsp;Method of mine**
 ---
 (I skip intricate diagrams…)
 
@@ -73,11 +73,12 @@ Followings are the attempts on the whole project:
 Here is the gathered data:
 
 | Method| ResNet50-all | ResNet50-fc | Bilinear with ResNet50 | Bilinear with ResNet34 | Bilinear with VGG16 |
-|--------|------|-------|-------|-----|---------|
-|Training Acc (no DA)|>97%|>90%|\|73.26%|88.86%|
-|Test Acc (no DA)|<2%|<2%|\|50.85%|57.49%|
-|Training Acc (DA)|\|\|\|68%|72.92%|
-|Test Acc (DA)|\|\|\|58%|70.59%|
+|-------------|--------------|------------|------------|-----------|----------|
+|Training Acc (no DA)|>97%|>90%| |73.26%|88.86%|
+|Test Acc (no DA)|<2%|<2%| |50.85%|57.49%|
+|Training Acc (DA)| | | |68%|72.92%|
+|Test Acc (DA)| | | |58%|70.59%|
+
 <font size=1>Due to the time-consuming training process, I just use a single ResNet50 to examine the effect of classifying, and I fine-tune the fc layers and all the layers separately. The data set I used includes: 160000 training images of 1000 different landmarks and 39000 test images, both are derived from Google Landmark Retrieval Database. Notice that the Bilinear modules  are just an experiment of Bilinear CNN in order to examine the characteristics of it with ResNet as base net. The dataset used for this test is CUB_200 with 11788 images.</font>
 
 ### **Chapter 5:&emsp;Debugging Techniques**
@@ -97,13 +98,19 @@ In principle, Adam is a new algorithm claimed to supplant SGD, it adjust learnin
 * **About input size (224\*224 or 448\*448)**
 
 Before this, I list all input size configuration I used:<br/>
-ResNet50 for LMR: 255*255<br/>
-ResNet34-based BCNN: 448*448<br/>
-ResNet34-based BCNN: 224*224<br/>
-VGG-D-based BCNN: 448*448<br/>
-VGG-D-based BCNN: 224*224<br/>
+ResNet50 for LMR: 255\*255<br/>
+ResNet34-based BCNN: 448\*448<br/>
+ResNet34-based BCNN: 224\*224<br/>
+VGG-D-based BCNN: 448\*448<br/>
+VGG-D-based BCNN: 224\*224<br/>
 
-Previously, I do not take input size into consideration, neither do PyTorch Docs. Normally we just use the size of 255, 224, 448. PyTorch Docs suggests to use “mini-batches of 3-channel RGB images of shape (3*H*W), where H and W are expected to be at least 224”. I have no way to know whether these models pre-trained on ImageNet require an input size of 224 or not. At the beginning, I choose the input size of 448 as the VGG-D-based BCNN and it works fine. Nevertheless when using ResNet50-based BCNN and ResNet34-based BCNN the results is so poor that only 35% accuracy is conducted.
+Previously, I do not take input size into consideration, neither do PyTorch Docs. Normally we just use the size of 255, 224, 448. PyTorch Docs suggests to use “mini-batches of 3-channel RGB images of shape (3\*H\*W), where H and W are expected to be at least 224”. I have no way to know whether these models pre-trained on ImageNet require an input size of 224 or not. At the beginning, I choose the input size of 448 as the VGG-D-based BCNN and it works fine. Nevertheless when using ResNet50-based BCNN and ResNet34-based BCNN the results is so poor that only 35% accuracy is conducted.
+
+![wuguan](https://i.imgur.com/Wo4e9Lr.jpg)
+
+![](https://image-static.segmentfault.com/334/564/3345641267-59c9df4945ddc_articlex)
+
+yes
 
 
 
